@@ -17,5 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::auth();
+
+Route::resource('blog','blogController');
+
 
 Route::get('/mail', 'mailController@mail');
+
+Route::get('/home', 'HomeController@index');
